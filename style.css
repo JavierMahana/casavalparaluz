@@ -1,0 +1,711 @@
+/* =========================================
+   1. VARIABLES Y PALETA OTOÑAL
+   ========================================= */
+:root {
+    /* Colores Principales (Otoño/Calidez) */
+    --primary-color: #D66D3A; /* Naranjo terracota cálido */
+    --primary-hover: #B85A2D; /* Naranjo más oscuro para hover */
+
+    /* Colores de Fondo (Transiciones suaves) */
+    --bg-light: #FDFBF7; /* Crema muy suave (reemplaza al blanco puro) */
+    --bg-alt: #F4EFE6;   /* Beige claro para intercalar secciones */
+    --bg-accent: #E28C65; /* Naranjo suave para la sección "Perfil" */
+    --bg-dark: #4A3B32;   /* Marrón cálido para contraste (reemplaza al negro/gris oscuro) */
+
+    /* Textos */
+    --text-main: #3E322C; /* Marrón muy oscuro para mejor lectura y menor fatiga visual */
+    --text-light: #7A6B63; /* Texto secundario */
+    --white: #FFFFFF;
+
+    /* Otros */
+    --whatsapp: #25D366;
+    --whatsapp-hover: #1EBE5A;
+    --shadow: 0 8px 20px rgba(74, 59, 50, 0.08); /* Sombra con un toque cálido */
+    --radius: 12px; /* Bordes redondeados para un look amigable */
+}
+
+/* =========================================
+   2. RESET Y TIPOGRAFÍA
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-light);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-main);
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================================
+   3. BOTONES Y EFECTOS HOVER
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px; /* Botones en forma de píldora */
+    font-weight: 600;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+/* Efecto de "levantamiento" al pasar el mouse */
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(214, 109, 58, 0.3);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    color: var(--white);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--white);
+}
+
+.btn-whatsapp, .btn-whatsapp-grande {
+    background-color: var(--whatsapp);
+    color: var(--white);
+}
+
+.btn-whatsapp:hover, .btn-whatsapp-grande:hover {
+    background-color: var(--whatsapp-hover);
+    color: var(--white);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp-grande {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   4. ESTRUCTURA Y SECCIONES
+   ========================================= */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 50px;
+    font-size: 1.1rem;
+}
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+
+/* Transiciones de color entre secciones */
+.seccion-clara { background-color: var(--bg-light); }
+.seccion-oscura {
+    background-color: var(--bg-alt); /* Usamos el beige para no hacer un salto brusco */
+}
+.seccion-acento {
+    background-color: var(--bg-accent);
+    color: var(--white);
+}
+.seccion-acento h2, .seccion-acento p {
+    color: var(--white);
+}
+.seccion-contacto {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+}
+.seccion-contacto h2, .seccion-contacto p, .seccion-contacto label {
+    color: var(--bg-light);
+}
+
+/* =========================================
+   5. BARRA DE NAVEGACIÓN
+   ========================================= */
+header {
+    background-color: rgba(253, 251, 247, 0.95); /* Crema semi-transparente */
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.logo h2 {
+    color: var(--primary-color);
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* =========================================
+   6. HERO SECTION (Animación Rotativa)
+   ========================================= */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    margin-top: 0; /* Para que ocupe todo detrás del header */
+
+    /* Configuración de la animación de fondo */
+    background-size: cover;
+    background-position: center;
+    background-color: var(--bg-dark);
+    animation: rotarFondo 15s infinite;
+    position: relative;
+}
+
+/* Oscurecemos un poco la imagen para que el texto resalte */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(74, 59, 50, 0.6); /* Capa oscura cálida */
+    z-index: 1;
+}
+
+/* Animación CSS pura para las 3 fotos de fondo */
+@keyframes rotarFondo {
+    0%, 25% { background-image: url('img/comunes/terraza4.jpeg'); }
+    33%, 58% { background-image: url('img/comunes/living1.jpeg'); }
+    66%, 91% { background-image: url('img/hab1/4.jpeg'); }
+    100% { background-image: url('img/comunes/terraza4.jpeg'); }
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    color: var(--white);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+/* =========================================
+   7. BENEFICIOS Y PERFIL (Grillas)
+   ========================================= */
+.grid-beneficios {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.beneficio-card {
+    background: var(--white);
+    padding: 40px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.beneficio-card:hover {
+    transform: translateY(-10px);
+}
+
+.beneficio-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.lista-perfil {
+    max-width: 800px;
+    margin: 40px auto 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: var(--radius);
+}
+
+.lista-perfil li {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.lista-perfil i {
+    color: var(--bg-light);
+    font-size: 1.3rem;
+    margin-top: 3px;
+}
+
+/* =========================================
+   8. HABITACIONES (Tarjetas)
+   ========================================= */
+.grid-habitaciones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.habitacion-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.habitacion-card:hover {
+    transform: translateY(-8px);
+}
+
+.habitacion-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.habitacion-info {
+    padding: 25px;
+}
+
+.habitacion-info .precio {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.habitacion-info p {
+    margin-bottom: 20px;
+    color: var(--text-light);
+}
+
+/* =========================================
+   9. GALERÍA DE ÁREAS COMUNES
+   ========================================= */
+.galeria-areas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.area-item {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    height: 250px;
+}
+
+.area-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.area-item:hover img {
+    transform: scale(1.1);
+}
+
+.area-item h4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(74, 59, 50, 0.9));
+    color: var(--white);
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+/* =========================================
+   10. UBICACIÓN, FAQ Y CONTACTO
+   ========================================= */
+.grid-2-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.lista-pros li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lista-pros i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 40px auto 0;
+}
+
+.faq-item {
+    background: var(--white);
+    padding: 25px;
+    border-radius: var(--radius);
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.faq-item h4 {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Formularios */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(253, 251, 247, 0.3);
+    border-radius: 8px;
+    background-color: rgba(253, 251, 247, 0.1);
+    color: var(--white);
+    font-family: inherit;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: rgba(253, 251, 247, 0.2);
+}
+
+/* Diseño de columnas perfectas (Grid) */
+.lista-alineada li {
+    display: grid;
+    /* 3 Columnas: 1. Icono (25px), 2. Título (130px), 3. Texto (Resto del espacio) */
+    grid-template-columns: 25px 130px 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: start;
+    font-size: 1.1rem;
+}
+
+/* La lista de perfil necesita una columna central más ancha para sus títulos largos */
+.lista-perfil-ancho li {
+    grid-template-columns: 25px 280px 1fr;
+}
+
+/* Baja un poco el ícono para que se alinee perfectamente con la primera línea de texto */
+.lista-alineada i {
+    margin-top: 6px;
+    color: var(--primary-color); /* Aplica el naranjo a todos los íconos de estas listas */
+    font-size: 1.3rem;
+}
+
+.lista-perfil i {
+    color: var(--bg-light); /* Mantiene el color claro de los íconos en la zona naranja */
+}
+
+
+/* =========================================
+   11. RESPONSIVE (MÓVILES)
+   ========================================= */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+    /* Esta es la regla nueva que oculta los elementos */
+    .hide-on-mobile {
+        display: none !important;
+    }
+
+    .nav-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .grid-2-columnas {
+        grid-template-columns: 1fr;
+    }
+
+    /* Ajuste de listas alineadas para móviles */
+    .lista-alineada li, .lista-perfil-ancho li {
+        /* Cambia a 2 columnas: 1. Icono, 2. Todo el texto */
+        grid-template-columns: 25px 1fr;
+    }
+
+    .lista-alineada strong {
+        display: block; /* Empuja el texto descriptivo hacia abajo */
+        margin-bottom: 5px;
+    }
+
+    .lista-alineada span {
+        grid-column: 2; /* Asegura que el texto descriptivo se mantenga a la derecha del ícono */
+    }
+}
+
+
+
+/* =========================================
+   12. SUBPÁGINAS DE HABITACIONES
+   ========================================= */
+.detalle-habitacion {
+    padding-top: 120px; /* Evita que el header fijo tape el contenido */
+    padding-bottom: 80px;
+}
+
+.header-habitacion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.precio-destacado {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.galeria-fotos {
+    display: grid;
+    /* Crea una cuadrícula responsiva de 3 columnas en PC y 1 en móviles */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.galeria-fotos img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.galeria-fotos img:hover {
+    transform: scale(1.03); /* Ligero zoom al pasar el mouse */
+}
+
+.info-habitacion {
+    background: var(--white);
+    padding: 50px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 50px;
+}
+
+.caracteristicas-lista {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.caracteristicas-lista li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+}
+
+.caracteristicas-lista i {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+}
+
+.btn-volver {
+    margin-top: 30px;
+}
+
+/* Ajustes móviles específicos para la subpágina */
+@media (max-width: 768px) {
+    .detalle-habitacion {
+        padding-top: 150px;
+    }
+    .info-habitacion {
+        padding: 30px 20px;
+    }
+    .precio-destacado {
+        font-size: 2rem;
+    }
+}
+
+/* =========================================
+   13. FOOTER (PIE DE PÁGINA)
+   ========================================= */
+.footer {
+    background-color: var(--bg-dark);
+    color: var(--bg-alt);
+    padding: 70px 0 20px;
+    border-top: 1px solid rgba(253, 251, 247, 0.1); /* Línea divisoria muy sutil */
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer h3 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.footer h4 {
+    color: var(--white);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.footer p {
+    color: rgba(253, 251, 247, 0.8); /* Crema con opacidad para no brillar tanto */
+    font-size: 0.95rem;
+}
+
+.footer ul li {
+    margin-bottom: 12px;
+}
+
+.footer ul a {
+    color: rgba(253, 251, 247, 0.8);
+    transition: color 0.3s ease, padding-left 0.3s ease; /* Transición suave */
+    display: inline-block;
+}
+
+/* Efecto hover: Cambia a naranjo y se mueve 5px a la derecha */
+.footer ul a:hover {
+    color: var(--primary-color);
+    padding-left: 5px;
+}
+
+.footer .contact-col p {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.footer .contact-col i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 25px;
+    border-top: 1px solid rgba(253, 251, 247, 0.1); /* Línea divisoria muy sutil */
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: rgba(253, 251, 247, 0.5);
+    margin: 0;
+}
