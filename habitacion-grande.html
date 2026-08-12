@@ -3,23 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitación Individual Grande | Casa Valparaluz</title>
-    <meta name="description" content="Habitación individual grande amoblada y con baño privado. Mayor amplitud y comodidad para estudiantes en Valparaíso. $300.000 mensuales con gastos comunes.">
 
+    <!-- Título y Descripción SEO -->
+    <title>Casa Valparaluz | Arriendo de Piezas para Estudiantes en Valparaíso</title>
+    <meta name="description" content="Arriendo de habitaciones limpias y tranquilas en Valparaíso. Piezas amobladas con baño privado, gastos comunes incluidos y balcón con vista 360º.">
+
+    <!-- Open Graph (Para previsualización en WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.casavalparaluz.cl/">
+    <meta property="og:title" content="Casa Valparaluz | Tu espacio en Valparaíso">
+    <meta property="og:description" content="Piezas amobladas con baño privado y terraza 360º. Ideal para estudiantes universitarios. ¡Agenda tu visita!">
+    <!-- Asegúrate de subir la web y poner la URL absoluta de tu mejor foto aquí -->
+    <meta property="og:image" content="https://www.casavalparaluz.cl/img/comunes/terraza5.jpeg">
+
+    <!-- Color del navegador en móviles (Tu color terracota) -->
+    <meta name="theme-color" content="#D66D3A">
+
+    <!-- Evitar contenido duplicado en buscadores -->
+    <link rel="canonical" href="https://www.casavalparaluz.cl/">
+
+    <!-- Fuentes, Estilos e Ícono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="img/Valparaluz-logo.svg">
 </head>
 <body class="seccion-clara">
 
-<!-- =========================================
-     BARRA DE NAVEGACIÓN
-     ========================================= -->
 <header>
     <div class="logo">
-        <h2>Valparaluz</h2>
+        <h2>Casa Valparaluz</h2>
     </div>
     <nav class="nav-links">
         <ul>
@@ -29,9 +44,6 @@
     </nav>
 </header>
 
-<!-- =========================================
-     DETALLE DE LA HABITACIÓN
-     ========================================= -->
 <main class="container detalle-habitacion">
 
     <div class="header-habitacion">
@@ -39,7 +51,7 @@
         <p class="precio-destacado">$300.000 / mes</p>
     </div>
 
-    <!-- Galería de 6 fotos (Nombres actualizados) -->
+    <!-- Galería (Rutas ajustadas a tu carpeta hab1) -->
     <div class="galeria-fotos">
         <img src="img/hab1/1.jpeg" alt="Vista general de la habitación grande">
         <img src="img/hab1/2.jpeg" alt="Zona de escritorio amplia">
@@ -60,16 +72,15 @@
             <li><i class="fa-solid fa-door-closed"></i> Armario espacioso</li>
             <li><i class="fa-solid fa-bath"></i> Baño privado exclusivo</li>
             <li><i class="fa-solid fa-wifi"></i> Internet de alta velocidad</li>
+            <li><i class="fa-solid fa-shirt"></i> Acceso a lavandería</li>
             <li><i class="fa-solid fa-bolt"></i> Luz, Agua y Gas incluidos</li>
-            <li><i class="fa-solid fa-shirt"></i> Acceso a lavadora y secadora</li>
         </ul>
     </div>
 
     <div class="text-center">
         <h3>¿Te interesa este espacio?</h3>
         <p>Consulta por disponibilidad inmediata o agenda una visita para conocer la casa.</p>
-        <!-- Mensaje de WhatsApp actualizado al precio y nombre de esta pieza -->
-        <a href="https://wa.me/569XXXXXXXX?text=Hola,%20me%20interesa%20la%20Habitación%20Individual%20Grande%20de%20$300.000.%20¿Tienen%20disponibilidad?" target="_blank" class="btn-whatsapp-grande">
+        <a href="https://wa.me/56995473302?text=Hola,%20me%20interesa%20la%20Habitación%20Individual%20Grande%20de%20$300.000.%20¿Tienen%20disponibilidad?" target="_blank" class="btn-whatsapp-grande">
             <i class="fa-brands fa-whatsapp"></i> Consultar Disponibilidad
         </a>
         <br>
@@ -77,8 +88,33 @@
             <i class="fa-solid fa-arrow-left"></i> Volver a las piezas
         </a>
     </div>
-
 </main>
 
+<footer class="footer">
+    <div class="container grid-footer">
+        <div class="footer-col brand-col">
+            <h3>Casa Valparaluz</h3>
+            <p>Tu espacio de tranquilidad y descanso en el corazón de Valparaíso. Un ambiente diseñado para tu comodidad y rendimiento.</p>
+        </div>
+        <div class="footer-col links-col">
+            <h4>Enlaces Rápidos</h4>
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#beneficios">Por qué elegirnos</a></li>
+                <li><a href="index.html#habitaciones">Habitaciones</a></li>
+                <li><a href="index.html#faq">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+        <div class="footer-col contact-col">
+            <h4>Contacto</h4>
+            <p><i class="fa-solid fa-location-dot"></i> Ricardo de Ferrari 483, Valparaíso</p>
+            <p><i class="fa-brands fa-whatsapp"></i> +56 9 9547 3302</p>
+            <p><i class="fa-solid fa-envelope"></i> micasavalparaluz@gmail.com</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Casa Valparaluz. Todos los derechos reservados.</p>
+    </div>
+</footer>
 </body>
 </html>

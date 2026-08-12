@@ -3,23 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casa Valparaluz | Arriendo de Piezas para Estudiantes en Valparaíso</title>
-    <meta name="description" content="Arriendo de habitaciones limpias y tranquilas en Valparaíso. Piezas amobladas con baño privado, gastos comunes incluidos y balcón con vista 360º. Ideal para estudiantes universitarios y trabajadores.">
 
+    <!-- Título y Descripción SEO -->
+    <title>Casa Valparaluz | Arriendo de Piezas para Estudiantes en Valparaíso</title>
+    <meta name="description" content="Arriendo de habitaciones limpias y tranquilas en Valparaíso. Piezas amobladas con baño privado, gastos comunes incluidos y balcón con vista 360º.">
+
+    <!-- Open Graph (Para previsualización en WhatsApp, Facebook, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.casavalparaluz.cl/">
+    <meta property="og:title" content="Casa Valparaluz | Tu espacio en Valparaíso">
+    <meta property="og:description" content="Piezas amobladas con baño privado y terraza 360º. Ideal para estudiantes universitarios. ¡Agenda tu visita!">
+    <!-- Asegúrate de subir la web y poner la URL absoluta de tu mejor foto aquí -->
+    <meta property="og:image" content="https://www.casavalparaluz.cl/img/comunes/terraza5.jpeg">
+
+    <!-- Color del navegador en móviles (Tu color terracota) -->
+    <meta name="theme-color" content="#D66D3A">
+
+    <!-- Evitar contenido duplicado en buscadores -->
+    <link rel="canonical" href="https://www.casavalparaluz.cl/">
+
+    <!-- Fuentes, Estilos e Ícono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="img/Valparaluz-logo.svg">
 </head>
 <body>
 
 <!-- =========================================
-     BARRA DE NAVEGACIÓN (Orden actualizado)
+     BARRA DE NAVEGACIÓN
      ========================================= -->
 <header>
     <div class="logo">
-        <h2>Valparaluz</h2>
+        <h2>Casa Valparaluz</h2>
     </div>
     <nav class="nav-links">
         <ul>
@@ -38,16 +56,29 @@
     </nav>
 </header>
 
+
+
 <!-- =========================================
      HERO SECTION
      ========================================= -->
 <section id="inicio" class="hero">
+
+    <!-- NUEVO: Contenedor del slider con opacidad -->
+    <div class="hero-slider">
+        <div class="slide bg-1"></div>
+        <div class="slide bg-2"></div>
+        <div class="slide bg-3"></div>
+    </div>
+
+    <!-- La capa oscura para que el texto sea legible -->
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
         <h1>Tu espacio de tranquilidad en Valparaíso</h1>
         <p>Piezas amobladas con baño privado. Limpieza, orden y una terraza con vista 360º increíble para estudiar y descansar.</p>
         <div class="hero-buttons">
             <a href="#habitaciones" class="btn btn-primary">Info y Precios</a>
-            <a href="https://wa.me/56966561921" target="_blank" class="btn btn-whatsapp">
+            <a href="https://wa.me/56995473302" target="_blank" class="btn btn-whatsapp">
                 <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp
             </a>
         </div>
@@ -55,11 +86,11 @@
 </section>
 
 <!-- =========================================
-     1. BENEFICIOS (El "Qué" y el Servicio)
+     1. BENEFICIOS
      ========================================= -->
 <section id="beneficios" class="seccion-clara">
     <div class="container">
-        <h2 class="section-title">¿Qué hace especial a Valparaluz?</h2>
+        <h2 class="section-title">¿Qué hace especial a Casa Valparaluz?</h2>
         <div class="grid-beneficios">
             <div class="beneficio-card">
                 <i class="fa-solid fa-bed"></i>
@@ -86,12 +117,12 @@
 </section>
 
 <!-- =========================================
-     2. PERFIL DEL INQUILINO (Nueva Sección Filtro)
+     2. PERFIL DEL INQUILINO
      ========================================= -->
 <section id="perfil" class="seccion-acento">
     <div class="container">
         <h2 class="section-title">¿Este espacio es para ti?</h2>
-        <p class="text-center">Valparaluz no es solo una casa, es una comunidad basada en el respeto. Este es tu lugar ideal si:</p>
+        <p class="text-center">Casa Valparaluz no es solo una casa, es una comunidad basada en el respeto. Este es tu lugar ideal si:</p>
 
         <div class="lista-perfil">
             <ul class="lista-alineada lista-perfil-ancho">
@@ -126,7 +157,7 @@
 <section id="habitaciones" class="seccion-clara">
     <div class="container">
         <h2 class="section-title">Nuestras Habitaciones</h2>
-        <p class="section-subtitle">Todas incluyen: Cama, escritorio, armario, acceso a lavandería y gastos comunes (Internet, luz, agua, gas).</p>
+        <p class="section-subtitle">Todas incluyen: Cama, escritorio, armario, acceso a lavadora y gastos comunes (Internet, luz, agua, gas).</p>
 
         <div class="grid-habitaciones">
             <div class="habitacion-card">
@@ -161,7 +192,7 @@
 </section>
 
 <!-- =========================================
-     4. ÁREAS COMUNES (Ahora solo enfoque visual/espacial)
+     4. ÁREAS COMUNES
      ========================================= -->
 <section id="areas-comunes" class="seccion-oscura">
     <div class="container">
@@ -182,6 +213,11 @@
                 <h4>Terraza Mirador</h4>
             </div>
         </div>
+
+        <div class="text-center" style="margin-top: 50px;">
+            <a href="terraza-mirador.html" class="btn btn-outline">Ver más fotos de la Terraza</a>
+        </div>
+
     </div>
 </section>
 
@@ -203,17 +239,17 @@
                 <li>
                     <i class="fa-solid fa-bus"></i>
                     <strong>Conectividad:</strong>
-                    <span>El colectivo 40 te deja en la puerta. A 3 cuadras de Av. Alemania para micros.</span>
+                    <span>El colectivo 39 desde Plazuela Ecuador te deja en la puerta. A 3 cuadras de Av. Alemania para locomoción colectiva. Linea 612 (micro O).</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-location-dot"></i>
                     <strong>Céntrico:</strong>
-                    <span>A tan solo 15 minutos caminando de la Plaza Victoria.</span>
+                    <span>A tan solo 5 minutos caminando de la Plaza Victoria.</span>
                 </li>
                 <li>
                     <i class="fa-solid fa-camera"></i>
                     <strong>Entorno:</strong>
-                    <span>Cerca del Museo a Cielo Abierto y variedad gastronómica en Av. Héctor Calvo.</span>
+                    <span>A pasos de La Sebastiana y el Museo a Cielo Abierto. Gran variedad de centros culturales y gastronómicos cercanos.</span>
                 </li>
             </ul>
         </div>
@@ -236,11 +272,19 @@
             </div>
             <div class="faq-item">
                 <h4><i class="fa-solid fa-users"></i> ¿Se pueden recibir visitas?</h4>
-                <p>Sí, las visitas son bienvenidas durante el día, siempre respetando la tranquilidad de la casa. Sin embargo, <strong>no está permitido que alojen a dormir.</strong></p>
+                <p>Sí, las visitas son bienvenidas durante el día, siempre respetando la tranquilidad de Casa Valparaluz. Sin embargo, <strong>no está permitido que pasen la noche en la casa.</strong></p>
             </div>
             <div class="faq-item">
-                <h4><i class="fa-solid fa-shirt"></i> ¿Cómo funciona el uso de la lavadora y secadora?</h4>
+                <h4><i class="fa-solid fa-shirt"></i> ¿Cómo funciona el uso de la lavadora?</h4>
                 <p>Los inquilinos tienen acceso a la zona de lavado. Solo debes traer tu propio detergente.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-bed"></i> ¿Debo llevar mi propia ropa de cama?</h4>
+                <p>No es estrictamente necesario. Si lo solicitas, podemos proporcionarte ropa de cama completa para tu habitación sin ningún costo extra.</p>
+            </div>
+            <div class="faq-item">
+                <h4><i class="fa-solid fa-map-location-dot"></i> ¿Qué lugares de interés hay cerca de la casa?</h4>
+                <p>Casa Valparaluz se encuentra en un sector privilegiado y céntrico. A poca distancia encontrarás el Museo a Cielo Abierto, gran variedad gastronómica en Av. Héctor Calvo, la Casa museo La Sebastiana, el Ascensor Espíritu Santo, la Iglesia de las Carmelitas, el Teatro Mauri y el Auditorio Osmán Pérez Freire.</p>
             </div>
         </div>
     </div>
@@ -254,13 +298,14 @@
         <div class="contacto-info">
             <h2 class="section-title text-left">Contáctanos</h2>
             <p>¿Tienes dudas o quieres agendar una visita? Escríbenos directamente o háblanos por WhatsApp. ¡Te responderemos rápidamente!</p>
-            <a href="https://wa.me/569XXXXXXXX" target="_blank" class="btn-whatsapp-grande">
+            <a href="https://wa.me/56995473302" target="_blank" class="btn-whatsapp-grande">
                 <i class="fa-brands fa-whatsapp"></i> +56 9 9547 3302
             </a>
         </div>
         <div class="contacto-formulario">
-            <form action="https://formsubmit.co/TU-CORREO@AQUI.COM" method="POST">
-                <input type="hidden" name="_subject" value="Nueva consulta por pieza en Valparaluz">
+            <!-- Correo configurado -->
+            <form action="https://formsubmit.co/micasavalparaluz@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Nueva consulta por pieza en Casa Valparaluz">
                 <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
                     <label for="nombre">Nombre:</label>
@@ -288,7 +333,7 @@
 
         <!-- Columna 1: Marca -->
         <div class="footer-col brand-col">
-            <h3>Valparaluz</h3>
+            <h3>Casa Valparaluz</h3>
             <p>Tu espacio de tranquilidad y descanso en el corazón de Valparaíso. Un ambiente diseñado para tu comodidad y rendimiento.</p>
         </div>
 
@@ -308,7 +353,7 @@
             <h4>Contacto</h4>
             <p><i class="fa-solid fa-location-dot"></i> Ricardo de Ferrari 483, Valparaíso</p>
             <p><i class="fa-brands fa-whatsapp"></i> +56 9 9547 3302</p>
-            <p><i class="fa-solid fa-envelope"></i> contacto@valparaluz.cl</p>
+            <p><i class="fa-solid fa-envelope"></i> micasavalparaluz@gmail.com</p>
         </div>
 
     </div>

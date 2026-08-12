@@ -207,9 +207,8 @@ header {
 .nav-links a:hover {
     color: var(--primary-color);
 }
-
 /* =========================================
-   6. HERO SECTION (Animación Rotativa)
+   6. HERO SECTION (Crossfade Suave GPU)
    ========================================= */
 .hero {
     height: 100vh;
@@ -218,36 +217,66 @@ header {
     justify-content: center;
     text-align: center;
     padding: 0 20px;
-    margin-top: 0; /* Para que ocupe todo detrás del header */
-
-    /* Configuración de la animación de fondo */
-    background-size: cover;
-    background-position: center;
-    background-color: var(--bg-dark);
-    animation: rotarFondo 15s infinite;
+    margin-top: 0;
     position: relative;
+    overflow: hidden; /* Evita que las imágenes se salgan del contenedor */
+    background-color: var(--bg-dark);
 }
 
-/* Oscurecemos un poco la imagen para que el texto resalte */
-.hero::before {
-    content: '';
+/* Contenedor y capas individuales del slider */
+.hero-slider, .slide {
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    background-size: cover;
+    background-position: center;
+    opacity: 0; /* Todas empiezan invisibles */
+    animation: fadeSuave 15s infinite; /* 15 segundos en total por ciclo */
+    z-index: 0;
+}
+
+/* Asignamos las imágenes y el retraso exacto para cada capa */
+.bg-1 {
+    background-image: url('img/comunes/terraza4.jpeg');
+    animation-delay: 0s;
+}
+.bg-2 {
+    background-image: url('img/comunes/living1.jpeg');
+    animation-delay: 5s;
+}
+.bg-3 {
+    background-image: url('img/hab1/4.jpeg');
+    animation-delay: 10s;
+}
+
+/* La magia del fundido suave cruzado */
+@keyframes fadeSuave {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; } /* Fundido de entrada */
+    33%  { opacity: 1; } /* Se mantiene visible */
+    43%  { opacity: 0; } /* Fundido de salida */
+    100% { opacity: 0; } /* Se mantiene oculta el resto del ciclo */
+}
+
+/* Capa oscura que va sobre las fotos pero debajo del texto */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: rgba(74, 59, 50, 0.6); /* Capa oscura cálida */
     z-index: 1;
 }
 
-/* Animación CSS pura para las 3 fotos de fondo */
-@keyframes rotarFondo {
-    0%, 25% { background-image: url('img/comunes/terraza4.jpeg'); }
-    33%, 58% { background-image: url('img/comunes/living1.jpeg'); }
-    66%, 91% { background-image: url('img/hab1/4.jpeg'); }
-    100% { background-image: url('img/comunes/terraza4.jpeg'); }
-}
-
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Siempre por encima del slider y el overlay */
     max-width: 800px;
     color: var(--white);
 }
