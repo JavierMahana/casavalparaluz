@@ -242,15 +242,15 @@ header {
 
 /* Asignamos las imágenes y el retraso exacto para cada capa */
 .bg-1 {
-    background-image: url('img/comunes/terraza4.jpeg');
+    background-image: url('img/comunes/terraza4.webp');
     animation-delay: 0s;
 }
 .bg-2 {
-    background-image: url('img/comunes/living1.jpeg');
+    background-image: url('img/comunes/living1.webp');
     animation-delay: 5s;
 }
 .bg-3 {
-    background-image: url('img/hab1/4.jpeg');
+    background-image: url('img/hab3/1.webp');
     animation-delay: 10s;
 }
 
@@ -455,25 +455,6 @@ header {
     font-size: 1.2rem;
 }
 
-.faq-container {
-    max-width: 800px;
-    margin: 40px auto 0;
-}
-
-.faq-item {
-    background: var(--white);
-    padding: 25px;
-    border-radius: var(--radius);
-    margin-bottom: 20px;
-    box-shadow: var(--shadow);
-}
-
-.faq-item h4 {
-    color: var(--primary-color);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
 /* Formularios */
 .form-group {
@@ -530,6 +511,86 @@ header {
     color: var(--bg-light); /* Mantiene el color claro de los íconos en la zona naranja */
 }
 
+/* =========================================
+   ESTILOS FAQ ACORDEÓN
+   ========================================= */
+.faq-item {
+    background-color: var(--bg-dark);
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.faq-pregunta {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faq-pregunta:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.faq-pregunta h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Animación de la flecha */
+.faq-icon {
+    color: var(--primary-color);
+    transition: transform 0.4s ease;
+}
+
+.faq-item.activa .faq-icon {
+    transform: rotate(180deg);
+}
+
+/* Ocultar la respuesta por defecto */
+.faq-respuesta {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.15); /* Fondo un poco más oscuro al abrir */
+}
+
+.faq-item.activa .faq-respuesta {
+    max-height: 800px; /* Espacio de sobra para que el texto se despliegue */
+    padding: 0 20px 20px 20px;
+}
+
+/* Estilo para las listas dentro del FAQ */
+.lista-faq {
+    padding-left: 20px;
+    margin-top: 15px;
+    color: var(--bg-alt);
+}
+
+.lista-faq li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Hacer que TODOS los párrafos dentro de la respuesta tengan color claro */
+.faq-respuesta p {
+    color: var(--bg-alt);
+    margin-top: 10px;
+}
+
+/* Para asegurarnos de que los textos en negrita dentro de las respuestas también destaquen */
+.faq-respuesta strong {
+    color: var(--white);
+    font-weight: 600;
+}
 
 /* =========================================
    11. RESPONSIVE (MÓVILES)
